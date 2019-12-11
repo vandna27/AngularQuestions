@@ -6,6 +6,20 @@
 |1 | [What is Angular Framework?](#what-is-angular-framework)|
 |2 | [What is the difference between AngularJS and Angular?](#what-is-the-difference-between-angularjs-and-angular)|
 |3 | [What is TypeScript?](#what-is-typescript)|
+|4 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+|5 | [Write a pictorial diagram of Angular architecture?](#Write a pictorial diagram of Angular architecture?)|
+|6 | [What are components?](#What are components?)|
+|7 | [What are directives?](#What are directives?)|
+|8 | [What are the differences between Component and Directive?](#What are the differences between Component and Directive?)|
+|9 | [What is a template?](#What is a template?)|
+|10 | [What is a module?](#What is a module?)|
+|11 | [What is metadata?](#What is metadata?)|
+|12 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+|13 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+|14 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+|15 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+|16 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+
 
 
 # 1. What is Angular Framework?
@@ -116,6 +130,7 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
     <p myHighlight>Highlight me!</p>
     ```
   **[⬆ Back to Top](#table-of-contents)**
+  
 
 8. ### What are the differences between Component and Directive?
     In a short note, A component(@component) is a directive-with-a-template.
@@ -189,4 +204,77 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
     2. The declarations option is used to define components in the respective module
     3. The bootstrap option tells Angular which Component to bootstrap in the application
 
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  
+11. ### What is metadata?
+    Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators
+    1. **Class decorators**, e.g. @Component and @NgModule
+    ```typescript
+    import { NgModule, Component } from '@angular/core';
+
+    @Component({
+      selector: 'my-component',
+      template: '<div>Class decorator</div>',
+    })
+    export class MyComponent {
+      constructor() {
+        console.log('Hey I am a component!');
+      }
+    }
+
+    @NgModule({
+      imports: [],
+      declarations: [],
+    })
+    export class MyModule {
+      constructor() {
+        console.log('Hey I am a module!');
+      }
+    }
+    ```
+    2. **Property decorators** Used for properties inside classes, e.g. @Input and @Output
+    ```typescript
+    import { Component, Input } from '@angular/core';
+
+    @Component({
+        selector: 'my-component',
+        template: '<div>Property decorator</div>'
+    })
+
+    export class MyComponent {
+        @Input()
+        title: string;
+    }
+    ```
+    3. **Method decorators** Used for methods inside classes, e.g. @HostListener
+    ```typescript
+    import { Component, HostListener } from '@angular/core';
+
+    @Component({
+        selector: 'my-component',
+        template: '<div>Method decorator</div>'
+    })
+    export class MyComponent {
+        @HostListener('click', ['$event'])
+        onHostClick(event: Event) {
+            // clicked, `event` available
+        }
+    }
+    ```
+    4. **Parameter decorators** Used for parameters inside class constructors, e.g. @Inject
+    ```typescript
+    import { Component, Inject } from '@angular/core';
+    import { MyService } from './my-service';
+
+    @Component({
+        selector: 'my-component',
+        template: '<div>Parameter decorator</div>'
+    })
+    export class MyComponent {
+        constructor(@Inject(MyService) myService) {
+            console.log(myService); // MyService
+        }
+    }
+    ```
   **[⬆ Back to Top](#table-of-contents)**
