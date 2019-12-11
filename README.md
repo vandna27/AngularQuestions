@@ -28,11 +28,11 @@
 |23 | [What is host decorators in Angular?](#What-is-host-decorators-in-Angular?)|
 |24 | [How Can you handle errors in Angular 2 Application?](#How-Can-you-handle-errors-in-Angular-2-Application?)|
 |25 | [What is AOT Compilation?](#What-is-AOT-Compilation?)|
-|26 | [What is metadata?](#What-is-metadata?)|
-|27 | [What is metadata?](#What-is-metadata?)|
-|28 | [What is metadata?](#What-is-metadata?)|
-|29 | [What is metadata?](#What-is-metadata?)|
-|30 | [What is metadata?](#What-is-metadata?)|
+|26 | [What is the option to choose between inline and external template file?](#What-is-the-option-to-choose-between-inline-and-external-template-file?)|
+|27 | [What is the purpose of ngFor directive?](#What-is-the-purpose-of-ngFor-directive?)|
+|28 | [What is the purpose of ngIf directive?](#What-is-the-purpose-of-ngIf-directive?)|
+|29 | [What happens if you use script tag inside template?](#What-happens-if-you-use-script-tag-inside-template?)|
+|30 | [What is interpolation?](#What-is-interpolation?)|
 |31 | [What is metadata?](#What-is-metadata?)|
 
 
@@ -469,3 +469,59 @@ The Angular 2 Applications provide with the option of error handling.The errors 
  AOT stands for Ahead of Time.It is the compilation in which Angular compiles the components and templates to JavaScript and HTML while developing.
  
  **[⬆ Back to Top](#table-of-contents)**
+
+26. ### What is the option to choose between inline and external template file?
+    You can store your component's template in one of two places. You can define it inline using the **template** property, or you can define the template in a separate HTML file and link to it in the component metadata using the **@Component** decorator's **templateUrl** property.
+    The choice between inline and separate HTML is a matter of taste, circumstances, and organization policy. But normally we use inline template for small portion of code and external template file for bigger views. By default, the Angular CLI generates components with a template file. But you can override that with the below command,
+    ```
+    ng generate component hero -it
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+27. ### What is the purpose of ngFor directive?
+    We use Angular ngFor directive in the template to display each item in the list. For example, here we iterate over list of users,
+    ```html
+    <li *ngFor="let user of users">
+      {{ user }}
+    </li>
+    ```
+    The user variable in the ngFor double-quoted instruction is a **template input variable**
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+28. ### What is the purpose of ngIf directive?
+    Sometimes an app needs to display a view or a portion of a view only under specific circumstances. The Angular ngIf directive inserts or removes an element based on a truthy/falsy condition. Let's take an example to display a message if the user age is more than 18,
+    ```html
+    <p *ngIf="user.age > 18">You are not eligible for student pass!</p>
+    ```
+    **Note:** Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance, especially in the larger projects with many data bindings.
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+29. ### What happens if you use script tag inside template?
+
+    Angular recognizes the value as unsafe and automatically sanitizes it, which removes the **<script>** tag but keeps safe content such as the text content of the <script> tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
+    Let's take an example of innerHtml property binding which causes XSS vulnerability,
+    ```typescript
+    export class InnerHtmlBindingComponent {
+      // For example, a user/attacker-controlled value from a URL.
+      htmlSnippet = 'Template <script>alert("0wned")</script> <b>Syntax</b>';
+    }
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+30. ### What is interpolation?
+
+    Interpolation is a special syntax that Angular converts into property binding. It’s a convenient alternative to property binding. It is represented by double curly braces({{}}). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
+    Let's take an example,
+    ```html
+    <h3>
+      {{title}}
+      <img src="{{url}}" style="height:30px">
+    </h3>
+    ```
+    In the example above, Angular evaluates the title and url properties and fills in the blanks, first displaying a bold application title and then a URL.
+
+  **[⬆ Back to Top](#table-of-contents)**
