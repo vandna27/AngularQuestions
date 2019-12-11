@@ -34,7 +34,7 @@
 |29 | [What happens if you use script tag inside template?](#What-happens-if-you-use-script-tag-inside-template?)|
 |30 | [What is interpolation?](#What-is-interpolation?)|
 |31 | [What’s an EventEmitter?](#What’s-an-EventEmitter?)|
-|32 | [What is the difference between lazy loading and eager loading in Angular 2?] (#What-is-the-difference-between-lazy-loading-and-eager-loading-in-Angular-2?)|
+|32 | [What is the difference between lazy loading and eager loading in Angular2?] (#What-is-the-difference-between-lazy-loading-and-eager-loading-in-Angular2?)|
 
 
 
