@@ -33,7 +33,8 @@
 |28 | [What is the purpose of ngIf directive?](#What-is-the-purpose-of-ngIf-directive?)|
 |29 | [What happens if you use script tag inside template?](#What-happens-if-you-use-script-tag-inside-template?)|
 |30 | [What is interpolation?](#What-is-interpolation?)|
-|31 | [What is metadata?](#What-is-metadata?)|
+|31 | [What’s an EventEmitter?](#What’s-an-EventEmitter?)|
+|32 | [What is the difference between lazy loading and eager loading in Angular 2?] (#What-is-the-difference-between-lazy-loading-and-eager-loading-in-Angular-2?)|
 
 
 
@@ -525,3 +526,16 @@ The Angular 2 Applications provide with the option of error handling.The errors 
     In the example above, Angular evaluates the title and url properties and fills in the blanks, first displaying a bold application title and then a URL.
 
   **[⬆ Back to Top](#table-of-contents)**
+
+31. ### What’s an EventEmitter?
+It’s a class in the Angular framework that emits custom events.
+
+ **[⬆ Back to Top](#table-of-contents)**
+
+32. ### What is the difference between lazy loading and eager loading in Angular 2?
+
+    | Lazy Loading | Eager Loading |
+    |---- | ---------|
+    | It needs to load using LoadChildren property in path or route configuration. This leading is useful for the growth of small size applications  | In order to load the eager loading module feature, it is important to import eager loading module into the application using imports metadata of decorator @NgModule |
+    
+    **[⬆ Back to Top](#table-of-contents)**
