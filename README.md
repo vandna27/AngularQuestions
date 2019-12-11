@@ -14,6 +14,26 @@
 |9 | [What is a template?](#What-is-a-template?)|
 |10 | [What is a module?](#What-is-a-module?)|
 |11 | [What is metadata?](#What-is-metadata?)|
+|12 | [What are lifecycle hooks available?](#What-are-lifecycle-hooks-available?)|
+|13 | [What is a data binding?](#What-is-a-data-binding?)|
+|14 | [What is angular CLI?](#What-is-angular-CLI?)|
+|15 | [What is a service?](#What-is-a-service?)|
+|16 | [What is the difference between constructor and ngOnInit?](#What-is-the-difference-between-constructor-and-ngOnInit?)|
+|17 | [What is the option to choose between inline and external template file?](#What-is-the-option-to-choose-between-inline-and-external-template-file?)|
+|18 | [What are Pipes in Angular?](#What-are-Pipes-in-Angular?)|
+|19 | [What is the purpose of async pipe?](#What-is-the-purpose-of-async-pipe?)|
+|20 | [What are lifecycle hooks available?](#What-are-lifecycle-hooks-available?)|
+|21 | [What is metadata?](#What-is-metadata?)|
+|22 | [What is metadata?](#What-is-metadata?)|
+|23 | [What is metadata?](#What-is-metadata?)|
+|24 | [What is metadata?](#What-is-metadata?)|
+|25 | [What is metadata?](#What-is-metadata?)|
+|26 | [What is metadata?](#What-is-metadata?)|
+|27 | [What is metadata?](#What-is-metadata?)|
+|28 | [What is metadata?](#What-is-metadata?)|
+|29 | [What is metadata?](#What-is-metadata?)|
+|30 | [What is metadata?](#What-is-metadata?)|
+|31 | [What is metadata?](#What-is-metadata?)|
 
 
 
@@ -272,4 +292,141 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
         }
     }
     ```
+  **[⬆ Back to Top](#table-of-contents)**
+  12. ### What are lifecycle hooks available?
+    Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
+    The representation of lifecycle in pictorial representation as follows,
+    ![ScreenShot](images/lifecycle.png)
+
+
+    The description of each lifecycle method is as below,
+    1. **ngOnChanges:** When the value of a data bound property changes, then this method is called.
+    2. **ngOnInit:** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
+    3. **ngDoCheck:** This is for the detection and to act on changes that Angular can't or won't detect on its own.
+    4. **ngAfterContentInit:** This is called in response after Angular projects external content into the component's view.
+    5. **ngAfterContentChecked:** This is called in response after Angular checks the content projected into the component.
+    6. **ngAfterViewInit:** This is called in response after Angular initializes the component's views and child views.
+    7. **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
+    8. **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  13. ### What is a data binding?
+    Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.
+    1. **From the Component to the DOM:**
+    **Interpolation:** {{ value }}: Adds the value of a property from the component
+    ```html
+    <li>Name: {{ user.name }}</li>
+    <li>Address: {{ user.address }}</li>
+    ```
+    **Property binding:** [property]=”value”: The value is passed from the component to the specified property or simple HTML attribute
+    ```html
+    <input type="email" [value]="user.email">
+    ```
+    2. **From the DOM to the Component:**
+    **Event binding: (event)=”function”:** When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
+    ```html
+    <button (click)="logout()"></button>
+    ```
+    3. **Two-way binding:**
+    **Two-way data binding:** [(ngModel)]=”value”: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
+    ```html
+    <input type="email" [(ngModel)]="user.email">
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  14. ### What is angular CLI?
+    Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
+    You need to install using below npm command,
+    ```
+    npm install @angular/cli@latest
+    ```
+    Below are the list of few commands, which will come handy while creating angular projects
+    1. **Creating New Project:** ng new <project-name>
+    2. **Generating Components, Directives & Services:** ng generate/g <feature-name>
+    The different types of commands would be,
+    * ng generate class my-new-class: add a class to your application
+    * ng generate component my-new-component: add a component to your application
+    * ng generate directive my-new-directive: add a directive to your application
+    * ng generate enum my-new-enum: add an enum to your application
+    * ng generate module my-new-module: add a module to your application
+    * ng generate pipe my-new-pipe: add a pipe to your application
+    * ng generate service my-new-service: add a service to your application
+    3. **Running the Project:** ng serve
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  15. ### What is a service?
+    A service is used when a common functionality needs to be provided to various modules. Services allow for greater separation of concerns for your application and better modularity by allowing you to extract common functionality out of components.
+    Let's create a repoService which can be used across components,
+    ```typescript
+    import { Injectable } from '@angular/core';
+    import { Http } from '@angular/http';
+
+    @Injectable({ // The Injectable decorator is required for dependency injection to work
+      // providedIn option registers the service with a specific NgModule
+      providedIn: 'root',  // This declares the service with the root app (AppModule)
+    })
+    export class RepoService{
+      constructor(private http: Http){
+      }
+
+      fetchAll(){
+        return this.http.get('https://api.github.com/repositories');
+      }
+    }
+    ```
+    The above service uses Http service as a dependency.
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  16. ### What is the difference between constructor and ngOnInit?
+    TypeScript classes has a default method called constructor which is normally used for the initialization purpose. Whereas ngOnInit method is specific to Angular, especially used to define Angular bindings. Even though constructor getting called first, it is preferred to move all of your Angular bindings to ngOnInit method.
+    In order to use ngOnInit, you need to implement OnInit interface as below,
+    ```typescript
+    export class App implements OnInit{
+      constructor(){
+         //called first time before the ngOnInit()
+      }
+
+      ngOnInit(){
+         //called after the constructor and called  after the first ngOnChanges()
+      }
+    }
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  17. ### What is the option to choose between inline and external template file?
+    You can store your component's template in one of two places. You can define it inline using the **template** property, or you can define the template in a separate HTML file and link to it in the component metadata using the **@Component** decorator's **templateUrl** property.
+    The choice between inline and separate HTML is a matter of taste, circumstances, and organization policy. But normally we use inline template for small portion of code and external template file for bigger views. By default, the Angular CLI generates components with a template file. But you can override that with the below command,
+    ```
+    ng generate component hero -it
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+  18. ### What are Pipes in Angular ?
+
+Pipes in Angular 2 are used in templates in order to convert them into a content that is user-friendly and readable one within the interpolation braces that is {{release| date}}, here the symbol “|” denotes the pipe.
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+19. ### What is the purpose of async pipe?
+    The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
+    Let's take a time observable which continuously updates the view for every 2 seconds with the current time.
+    ```typescript
+    @Component({
+      selector: 'async-observable-pipe',
+      template: `<div><code>observable|async</code>:
+           Time: {{ time | async }}</div>`
+    })
+    export class AsyncObservablePipeComponent {
+      time = new Observable(observer =>
+        setInterval(() => observer.next(new Date().toString()), 2000)
+      );
+    }
+    ```
+
   **[⬆ Back to Top](#table-of-contents)**
