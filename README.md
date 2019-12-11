@@ -22,7 +22,7 @@
 |17 | [What is the option to choose between inline and external template file?](#What-is-the-option-to-choose-between-inline-and-external-template-file?)|
 |18 | [What are Pipes in Angular?](#What-are-Pipes-in-Angular?)|
 |19 | [What is the purpose of async pipe?](#What-is-the-purpose-of-async-pipe?)|
-|20 | [What is dependency injection in Angular?](#What is dependency injection in Angular?)|
+|20 | [What is dependency injection in Angular?](#What-is-dependency-injection-in-Angular?)|
 |21 | [What is metadata?](#What-is-metadata?)|
 |22 | [What is metadata?](#What-is-metadata?)|
 |23 | [What is metadata?](#What-is-metadata?)|
