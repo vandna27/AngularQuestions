@@ -23,8 +23,8 @@
 |18 | [What are Pipes in Angular?](#What-are-Pipes-in-Angular?)|
 |19 | [What is the purpose of async pipe?](#What-is-the-purpose-of-async-pipe?)|
 |20 | [What is dependency injection in Angular?](#What-is-dependency-injection-in-Angular?)|
-|21 | [What is metadata?](#What-is-metadata?)|
-|22 | [What is metadata?](#What-is-metadata?)|
+|21 | [What is Angular @RouteParams?](#What-is-Angular-@RouteParams?)|
+|22 | [Why are decorators used in Angular ?](#Why-are-decorators-used-in-Angular?)|
 |23 | [What is metadata?](#What-is-metadata?)|
 |24 | [What is metadata?](#What-is-metadata?)|
 |25 | [What is metadata?](#What-is-metadata?)|
@@ -436,3 +436,14 @@ Pipes in Angular 2 are used in templates in order to convert them into a content
     Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that a class needs to perform its function).So you can have your services depend on other services throughout your application.
 
   **[⬆ Back to Top](#table-of-contents)**
+  
+  21. ### What is Angular @RouteParams?
+  
+  The RouteParams are used to map the given URL’s based on the route URLs and they become optional parameters for that route.
+  
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  22. ### Why are decorators used in Angular ?
+  In Angular, decorators are used as an identifier of class or type of the object that is created by the TypeScript.The Angular  identifies the class below decorator call as the definition of the class and extends the decorator specific properties with the class definition.
+
+**[⬆ Back to Top](#table-of-contents)**
