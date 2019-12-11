@@ -5,8 +5,8 @@
 |:--:|-----------------------------------------------------------------------------------------------------------------|
 |1 | [What is Angular Framework?](#what-is-angular-framework)|
 |2 | [What is the difference between AngularJS and Angular?](#what-is-the-difference-between-angularjs-and-angular)|
-|3 | [What is TypeScript?](#what-is-typescript)|
-|4 | [What are the key components of Angular 2?](#What are the key components of Angular 2?)|
+|3 | [What is TypeScript?](#what-is-typescript) |
+|4 |  [What are the key components of Angular 2?] (#What are the key components of Angular 2?) |
 |5 | [Write a pictorial diagram of Angular architecture?](#Write a pictorial diagram of Angular architecture?)|
 |6 | [What are components?](#What are components?)|
 |7 | [What are directives?](#What are directives?)|
