@@ -2,8 +2,10 @@
 
 ### Table of Contents
 |S.No. | Questions|
-|:-:| :-:|
-|1.|test|
+|:--:| :--------------:|
+|1 | [What is Angular Framework?](#what-is-angular-framework)|
+|2 | [What is the difference between AngularJS and Angular?](#what-is-the-difference-between-angularjs-and-angular)|
+|3 | [What is TypeScript?](#what-is-typescript)|
 
 
 # 1. What is Angular Framework?
