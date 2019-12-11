@@ -22,7 +22,7 @@
 |17 | [What is the option to choose between inline and external template file?](#What-is-the-option-to-choose-between-inline-and-external-template-file?)|
 |18 | [What are Pipes in Angular?](#What-are-Pipes-in-Angular?)|
 |19 | [What is the purpose of async pipe?](#What-is-the-purpose-of-async-pipe?)|
-|20 | [What are lifecycle hooks available?](#What-are-lifecycle-hooks-available?)|
+|20 | [What is dependency injection in Angular?](#What is dependency injection in Angular?)|
 |21 | [What is metadata?](#What-is-metadata?)|
 |22 | [What is metadata?](#What-is-metadata?)|
 |23 | [What is metadata?](#What-is-metadata?)|
@@ -293,6 +293,7 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
     }
     ```
   **[⬆ Back to Top](#table-of-contents)**
+  
   12. ### What are lifecycle hooks available?
     Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
     The representation of lifecycle in pictorial representation as follows,
@@ -428,5 +429,10 @@ Pipes in Angular 2 are used in templates in order to convert them into a content
       );
     }
     ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+20. ### What is dependency injection in Angular?
+    Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that a class needs to perform its function).So you can have your services depend on other services throughout your application.
 
   **[⬆ Back to Top](#table-of-contents)**
