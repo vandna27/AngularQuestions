@@ -538,4 +538,4 @@ It’s a class in the Angular framework that emits custom events.
     |---- | ---------|
     | It needs to load using LoadChildren property in path or route configuration. This leading is useful for the growth of small size applications  | In order to load the eager loading module feature, it is important to import eager loading module into the application using imports metadata of decorator @NgModule |
     
-    **[⬆ Back to Top](#table-of-contents)**
+  **[⬆ Back to Top](#table-of-contents)**
