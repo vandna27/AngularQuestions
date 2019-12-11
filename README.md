@@ -65,6 +65,8 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
    **Service** − This is used to create components which can be shared across the entire application.
 
   **[⬆ Back to Top](#table-of-contents)**
+  
+  
   5. ### Write a pictorial diagram of Angular architecture?
     The main building blocks of an Angular application is shown in the below diagram
   
