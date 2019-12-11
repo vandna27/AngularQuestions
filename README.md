@@ -25,9 +25,9 @@
 |20 | [What is dependency injection in Angular?](#What-is-dependency-injection-in-Angular?)|
 |21 | [What is Angular @RouteParams?](#What-is-Angular-@RouteParams?)|
 |22 | [Why are decorators used in Angular ?](#Why-are-decorators-used-in-Angular?)|
-|23 | [What is metadata?](#What-is-metadata?)|
-|24 | [What is metadata?](#What-is-metadata?)|
-|25 | [What is metadata?](#What-is-metadata?)|
+|23 | [What is host decorators in Angular?](#What-is-host-decorators-in-Angular?)|
+|24 | [How Can you handle errors in Angular 2 Application?](#How-Can-you-handle-errors-in-Angular-2-Application?)|
+|25 | [What is AOT Compilation?](#What-is-AOT-Compilation?)|
 |26 | [What is metadata?](#What-is-metadata?)|
 |27 | [What is metadata?](#What-is-metadata?)|
 |28 | [What is metadata?](#What-is-metadata?)|
@@ -447,3 +447,25 @@ Pipes in Angular 2 are used in templates in order to convert them into a content
   In Angular, decorators are used as an identifier of class or type of the object that is created by the TypeScript.The Angular  identifies the class below decorator call as the definition of the class and extends the decorator specific properties with the class definition.
 
 **[⬆ Back to Top](#table-of-contents)**
+
+23. ### What is host decorators in Angular?
+
+The host decorators in Angular 2 bind the properties of components with UI element values.The properties inside a component class definition which are decorated with @HostBinding are accessed in a template from the assigned property that is @HostBinding()title=’Our title'( whatever the title is).
+
+**[⬆ Back to Top](#table-of-contents)**
+
+24.  ### How Can you handle errors in Angular 2 Application?
+
+The Angular 2 Applications provide with the option of error handling.The errors in Angular 2 can be handled by including the React JS catch library and later using the catch function.
+
+1. The catch function, which is used after adding the catch library contains the link to the Error handler function.
+2. And in this error, handler function, the errors are sent to the error console, and also the errors are thrown back to continue the execution.
+3. So, whenever an error occurs it will be redirected to the error console of the web.
+
+**[⬆ Back to Top](#table-of-contents)**
+ 
+ 25. ### What is AOT Compilation?
+ 
+ AOT stands for Ahead of Time.It is the compilation in which Angular compiles the components and templates to JavaScript and HTML while developing.
+ 
+ **[⬆ Back to Top](#table-of-contents)**
