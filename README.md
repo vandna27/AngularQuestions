@@ -66,7 +66,7 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
 
   **[⬆ Back to Top](#table-of-contents)**
   
-![Preview](https://raw.githubusercontent.com/username/project/master/image-path/image.png)
+![Preview](https://github.com/vandna27/AngularQuestions/blob/master/architecture.png)
 
 
   **[⬆ Back to Top](#table-of-contents)**
