@@ -35,6 +35,10 @@
 |30 | [What is interpolation?](#What-is-interpolation?)|
 |31 | [What’s an EventEmitter?](#What’s-an-EventEmitter?)|
 |32 | [What is the difference between lazy loading and eager loading in Angular2?](#What-is-the-difference-between-lazy-loading-and-eager-loading-in-Angular2?)|
+|33 |[How to redirect to 404 or other path if the path does not exist in Angular 2?](#How-to-redirect-to-404-or-other-path-if-the-path-does-not-exist-in-Angular-2?)|
+|34 |[How can you create singleton service in angular 2?](#How-can-you-create-singleton-service-in-angular-2?)|
+|35 |[What are the difference between @injectable() vs. @inject() in angular 2?](#What-are-the-difference-between-@injectable()-vs.-@inject()-in-angular-2?)|
+|36 |[How to redirect to 404 or other path if the path does not exist in Angular 2?](#How-to-redirect-to-404-or-other-path-if-the-path-does-not-exist-in-Angular-2?)|
 
 
 
@@ -539,3 +543,35 @@ It’s a class in the Angular framework that emits custom events.
     | It needs to load using LoadChildren property in path or route configuration. This leading is useful for the growth of small size applications  | In order to load the eager loading module feature, it is important to import eager loading module into the application using imports metadata of decorator @NgModule |
     
   **[⬆ Back to Top](#table-of-contents)**
+  
+33. ### How to redirect to 404 or other path if the path does not exist in Angular 2?
+
+  Using angular routing you can navigate from one view or page to another while performing your tasks. You can configure a URL to redirect to the next URL. This feature can be handled to address the "404 Not Found" problem. Using location services in Angular routing you can go back and forward through the history of pages.
+
+  Syntax : We can use {path: '/OUR_PATH', redirectTo: ['redirectPathName']}
+ 
+  Example
+                                                    
+  {path: '/404', name: 'PageNotFound', component: NotFoundComponent}
+
+ **[⬆ Back to Top](#table-of-contents)**
+ 
+ 34. ### How can you create singleton service in angular 2?
+   Here is the steps to create a singleton service-
+    1. Import the injectable member using import {Injectable} from '@angular/core';
+    2. Import the HttpModule, Http and Response members’ as import { HttpModule, Http, Response } from '@angular/http';
+    3. Add the decorator @Injectable()
+    4. Export –
+    export class UserService {
+       constructor(private _http: Http) { }
+    }
+    
+    **[⬆ Back to Top](#table-of-contents)**
+    
+    35. ### What are the difference between @injectable() vs. @inject() in angular 2?
+     | @injectable() | @inject() |
+     |---- | ---------|
+     |Aims to set metadata of dependencies to be injected into constructor| Tells Angular what parameter must be injected|
+     |Without it, no dependency can be injected |Without it, no dependency can be injected|
+    
+    **[⬆ Back to Top](#table-of-contents)**
