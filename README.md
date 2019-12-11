@@ -52,16 +52,16 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
   
   4. ### What are the key components of Angular 2?
   
-  Angular 2 has the following components −
+   Angular 2 has the following components −
 
-**Modules** − This is used to break up the application into logical pieces of code. Each piece of code or module is designed to perform a single task.
+   **Modules** − This is used to break up the application into logical pieces of code. Each piece of code or module is designed to perform a single task.
 
-**Component** − This can be used to bring the modules together.
+   **Component** − This can be used to bring the modules together.
 
-**Templates** − This is used to define the views of an Angular JS application.
+   **Templates** − This is used to define the views of an Angular JS application.
 
-**Metadata** − This can be used to add more data to an Angular JS class.
+   **Metadata** − This can be used to add more data to an Angular JS class.
 
-**Service** − This is used to create components which can be shared across the entire application.
+   **Service** − This is used to create components which can be shared across the entire application.
 
   **[⬆ Back to Top](#table-of-contents)**
