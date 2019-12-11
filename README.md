@@ -68,6 +68,7 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
   
   5. ### Write a pictorial diagram of Angular architecture?
     The main building blocks of an Angular application is shown in the below diagram
+    
     ![ScreenShot](images/architecture.png)
 
   **[⬆ Back to Top](#table-of-contents)**
