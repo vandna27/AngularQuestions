@@ -6,14 +6,14 @@
 |1 | [What is Angular Framework?](#what-is-angular-framework)|
 |2 | [What is the difference between AngularJS and Angular?](#what-is-the-difference-between-angularjs-and-angular)|
 |3 | [What is TypeScript?](#what-is-typescript) |
-|4 |  [What are the key components of Angular 2?] (#What are the key components of Angular 2?) |
-|5 | [Write a pictorial diagram of Angular architecture?](#Write a pictorial diagram of Angular architecture?)|
-|6 | [What are components?](#What are components?)|
-|7 | [What are directives?](#What are directives?)|
-|8 | [What are the differences between Component and Directive?](#What are the differences between Component and Directive?)|
-|9 | [What is a template?](#What is a template?)|
-|10 | [What is a module?](#What is a module?)|
-|11 | [What is metadata?](#What is metadata?)|
+|4 | [What are the key components of Angular 2?](#What-are-the-key-components-of-Angular-2?)|
+|5 | [Write a pictorial diagram of Angular architecture?](#Write-a-pictorial-diagram-of-Angular-architecture?)|
+|6 | [What are components?](#What-are-components?)|
+|7 | [What are directives?](#What-are-directives?)|
+|8 | [What are the differences between Component and Directive?](#What-are-the-differences-between-Component-and-Directive?)|
+|9 | [What is a template?](#What-is-a-template?)|
+|10 | [What is a module?](#What-is-a-module?)|
+|11 | [What is metadata?](#What-is-metadata?)|
 
 
 
