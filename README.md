@@ -76,3 +76,117 @@ Angular is a TypeScript-based open-source front-end platform that makes it easy 
   **[⬆ Back to Top](#table-of-contents)**
   
   
+
+6. ### What are components?
+    Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
+    Let's see a simple example of Angular component
+    ```typescript
+    import { Component } from '@angular/core';
+
+    @Component ({
+       selector: 'my-app',
+       template: ` <div>
+          <h1>{{title}}</h1>
+          <div>Learn Angular6 with examples</div>
+       </div> `,
+    })
+
+    export class AppComponent {
+       title: string = 'Welcome to Angular world';
+    }
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+  
+  7. ### What are directives?
+    Directives add behaviour to an existing DOM element or an existing component instance.
+    ```typescript
+    import { Directive, ElementRef, Input } from '@angular/core';
+
+    @Directive({ selector: '[myHighlight]' })
+    export class HighlightDirective {
+        constructor(el: ElementRef) {
+           el.nativeElement.style.backgroundColor = 'yellow';
+        }
+    }
+    ```
+
+    Now this directive extends HTML element behavior with a yellow background as below
+    ```html
+    <p myHighlight>Highlight me!</p>
+    ```
+  **[⬆ Back to Top](#table-of-contents)**
+
+8. ### What are the differences between Component and Directive?
+    In a short note, A component(@component) is a directive-with-a-template.
+
+    Some of the major differences are mentioned in a tabular form
+
+    | Component | Directive |
+    |---- | ---------
+    | To register a component we use @Component meta-data annotation  | To register directives we use @Directive meta-data annotation |
+    | Components are typically used to create UI widgets| Directive is used to add behavior to an existing DOM element |
+    | Component is used to break up the application into smaller components| Directive is use to design re-usable components|
+    | Only one component can be present per DOM element | Many directives can be used per DOM element |
+    | @View decorator or templateurl/template are mandatory | Directive doesn't use View|
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+9. ### What is a template?
+    A template is a HTML view where you can display data by binding controls to properties of an Angular component. You can store your component's template in one of two places. You can define it inline using the template property, or you can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
+    **Using inline template with template syntax,**
+    ```typescript
+    import { Component } from '@angular/core';
+
+    @Component ({
+       selector: 'my-app',
+       template: '
+          <div>
+             <h1>{{title}}</h1>
+             <div>Learn Angular</div>
+          </div>
+       '
+    })
+
+    export class AppComponent {
+       title: string = 'Hello World';
+    }
+    ```
+    **Using separate template file such as app.component.html**
+    ```typescript
+    import { Component } from '@angular/core';
+
+    @Component ({
+       selector: 'my-app',
+       templateUrl: 'app/app.component.html'
+    })
+
+    export class AppComponent {
+       title: string = 'Hello World';
+    }
+    ```
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+10. ### What is a module?
+
+    Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of your application.
+    Lets take an example of **app.module.ts** root module declared with **@NgModule** decorator as below,
+    ```typescript
+    import { NgModule }      from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent }  from './app.component';
+
+    @NgModule ({
+       imports:      [ BrowserModule ],
+       declarations: [ AppComponent ],
+       bootstrap:    [ AppComponent ]
+    })
+    export class AppModule { }
+    ```
+    The NgModule decorator has three options
+    1. The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application
+    2. The declarations option is used to define components in the respective module
+    3. The bootstrap option tells Angular which Component to bootstrap in the application
+
+  **[⬆ Back to Top](#table-of-contents)**
